@@ -5,10 +5,11 @@ import Aboutus from "./pages/Aboutus";
 import List from "./pages/List";
 import pages from "./data/pages";
 import PostDetail from "./components/PostDetail";
+import { PostsProvider } from "../contexts/PostContext";
 
 function App() {
   return (
-    <>
+    <PostsProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
@@ -19,7 +20,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </PostsProvider>
   );
 }
 
